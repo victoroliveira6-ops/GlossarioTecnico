@@ -1,0 +1,159 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(31, 31, 31);
+    color: #cccccc;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    padding: 10px 20px;
+}
+
+.left, .center, .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title-text {
+    padding: 4px 330px;
+    border: 2px solid #4d4c4c;
+    border-radius: 6px;
+    background-color: #35383b;
+    font-weight: 600;
+}
+
+/* Side Bar */
+.side-bar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 50px;
+    height: 100vh;
+    background-color: #1e1e1e;
+}
+
+.side-bar img {
+    object-fit: contain;
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 70px; /* espaço para a side-bar */
+    margin-top: 100px; /* abaixo da top-bar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #cccccc;
+    background-color: #0e639c;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #1177bb;
+    transform: scale(1.05);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #111;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid #000000;
+}
+
+
+.card.html::before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/919/919827.png');
+}
+
+.card.css::before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/919/919826.png');
+}
+
+.card.js::before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/919/919828.png');
+}
+
+.estilo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+.estilo h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.estilo p {
+    margin-top: 5px;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000000;
+    border-top: 3px solid #2b2b2b;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
